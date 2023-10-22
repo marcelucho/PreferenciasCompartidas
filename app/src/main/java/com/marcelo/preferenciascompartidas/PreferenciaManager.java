@@ -14,13 +14,13 @@ public class PreferenciaManager {
     public void salvarLoginDetalles(String email, String password){
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDatos", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("email", email);
-        editor.putString("password", password);
+        editor.putString("Email", email);
+        editor.putString("Password", password);
         editor.commit();
     }
     public String getEmail(){
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDatos", Context.MODE_PRIVATE);
-        return sharedPreferences.getString("email", "");
+        return sharedPreferences.getString("Email", "");
     }
     public boolean isUsuarioLogedOut(){
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDatos", Context.MODE_PRIVATE);
